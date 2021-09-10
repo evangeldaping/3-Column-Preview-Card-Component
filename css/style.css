@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+    --dark-cyan: hsl(184, 100%, 22%);
+    --bright-orange: hsl(31, 77%, 52%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --lexend-deca: "Lexend Deca";
+    --big-shoulders-display: "Big Shoulders Display";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: var(--lexend-deca), sans-serif;
+}
+
+body {
+    background: var(--very-light-gray);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    max-width: 305px;
+}
+
+.sedan {
+    background: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.sedan button {
+    color: var(--bright-orange);
+}
+
+.sedan button:hover {
+    background: var(--bright-orange);
+}
+
+.suvs {
+    background: var(--dark-cyan);
+}
+
+.suvs button {
+    color: var(--dark-cyan);
+}
+
+.suvs button:hover {
+    background: var(--dark-cyan);
+}
+
+.luxury {
+    background: var(--very-dark-cyan);
+    border-radius: 0px 0 10px 10px;
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.luxury button:hover {
+    background: var(--very-dark-cyan);
+}
+
+.sedan,
+.suvs,
+.luxury {
+    padding: 40px;
+}
+
+h1 {
+    font-family: var(--big-shoulders-display), sans-serif;
+    font-size: 40px;
+    color: var(--transparent-white);
+    padding: 30px 0 30px 0;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--transparent-white);
+    font-size: 15px;
+    line-height: 25px;
+}
+
+button {
+    border-radius: 50px;
+    background: var(--transparent-white);
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+}
+
+button:hover {
+    border: 3px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 801px) {
+    body {
+        padding: 200px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 922px;
+        height: 500px;
+    }
+
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        border-radius: 0px 10px 10px 0;
+    }
+
+    button {
+        margin-top: 90px;
+    }
+}
